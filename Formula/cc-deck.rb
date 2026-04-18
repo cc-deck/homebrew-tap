@@ -5,23 +5,23 @@
 class CcDeck < Formula
   desc "The TweetDeck for Claude Code. A Zellij sidebar plugin for managing multiple Claude Code sessions."
   homepage "https://cc-deck.github.io"
-  version "0.9.1"
+  version "0.10.0"
   license "Apache-2.0"
 
   depends_on "zellij" => :recommended
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/cc-deck/cc-deck/releases/download/v0.9.1/cc-deck_0.9.1_darwin_amd64.tar.gz"
-      sha256 "60f7ca687c7b0a6094842088858ef63e15a6dec14500799e1853c32f3af3f3ef"
+      url "https://github.com/cc-deck/cc-deck/releases/download/v0.10.0/cc-deck_0.10.0_darwin_amd64.tar.gz"
+      sha256 "39911067687baff7fff63f49cc0e390978455d9a5f2e6fa2a24c1496e7fb21be"
 
       define_method(:install) do
         bin.install "cc-deck"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/cc-deck/cc-deck/releases/download/v0.9.1/cc-deck_0.9.1_darwin_arm64.tar.gz"
-      sha256 "3e3960d67b78ba50d23dc9988f7aaee57571a291352a98dd8b3ab3027e07019c"
+      url "https://github.com/cc-deck/cc-deck/releases/download/v0.10.0/cc-deck_0.10.0_darwin_arm64.tar.gz"
+      sha256 "e2406188b6cdeb120b65d9b132a0955a67b2ee27fcffc11c36615a38517d8817"
 
       define_method(:install) do
         bin.install "cc-deck"
@@ -31,15 +31,15 @@ class CcDeck < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cc-deck/cc-deck/releases/download/v0.9.1/cc-deck_0.9.1_linux_amd64.tar.gz"
-      sha256 "0d735dc9c59dac7d42ed17feb18cc9aa6584779b4e9799b1a1619e82630b6677"
+      url "https://github.com/cc-deck/cc-deck/releases/download/v0.10.0/cc-deck_0.10.0_linux_amd64.tar.gz"
+      sha256 "60b31a5efaf26ca1e8df6a2a90c6a84472befcea9f268d8f8aa2eba26e9579a7"
       define_method(:install) do
         bin.install "cc-deck"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cc-deck/cc-deck/releases/download/v0.9.1/cc-deck_0.9.1_linux_arm64.tar.gz"
-      sha256 "411e3436b8f3e414727a62544e9de85313c0dea7e15beeec2567e63fcfd98b38"
+      url "https://github.com/cc-deck/cc-deck/releases/download/v0.10.0/cc-deck_0.10.0_linux_arm64.tar.gz"
+      sha256 "31cb248ff6d515d4cf36a5215a10a074d8ea69ce59d01aca3ec058a48d2b44d9"
       define_method(:install) do
         bin.install "cc-deck"
       end
@@ -50,7 +50,7 @@ class CcDeck < Formula
     <<~EOS
       After installation, set up the Zellij plugin and hooks:
 
-        cc-deck plugin install
+        cc-deck config plugin install
 
       Then start Zellij with the cc-deck layout:
 
