@@ -1,25 +1,25 @@
 class CcSession < Formula
   desc "Fast CLI tool for finding and resuming Claude Code sessions"
   homepage "https://github.com/cc-deck/cc-session"
-  version "0.7.6"
+  version "0.7.7"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/cc-deck/cc-session/releases/download/v0.7.6/cc-session-aarch64-apple-darwin.tar.xz"
-      sha256 "11f32095558eeea3d7addb0a0bbbf0e235ebfaed862d7597f4a764fe2585dee9"
+      url "https://github.com/cc-deck/cc-session/releases/download/v0.7.7/cc-session-aarch64-apple-darwin.tar.xz"
+      sha256 "c5a7977f7f8447051c29bad34158c3900b6fa4bf32f4c76115c4198778ecdeea"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/cc-deck/cc-session/releases/download/v0.7.6/cc-session-x86_64-apple-darwin.tar.xz"
-      sha256 "1e63ac625c8a9de46a80fe6469c7ac65db535b085febf0b5d7defeedc382748e"
+      url "https://github.com/cc-deck/cc-session/releases/download/v0.7.7/cc-session-x86_64-apple-darwin.tar.xz"
+      sha256 "fab9ed0ee4216a9f6ae670b55219b52eea8bc05b86f792433561f97f3e7cb6cc"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/cc-deck/cc-session/releases/download/v0.7.6/cc-session-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "7e32bf0d9451727f5b7f69cb3a4011aec46c8002667389ce8006e3636a00a477"
+      url "https://github.com/cc-deck/cc-session/releases/download/v0.7.7/cc-session-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "3952f61c6cac01be65f79ba06cf6f544584a03f6d38fdfe6ce4f3b0815179d00"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/cc-deck/cc-session/releases/download/v0.7.6/cc-session-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "1e3595b2075cc6b49aa5e6a379820fffed5aad57779db7e1898c774284385c39"
+      url "https://github.com/cc-deck/cc-session/releases/download/v0.7.7/cc-session-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "4a8acf58917fcc53404a2c5cae03d1c1cba578d0bff32abb40b13ffccd717c54"
     end
   end
   license "MIT"
