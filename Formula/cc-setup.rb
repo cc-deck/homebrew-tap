@@ -5,21 +5,21 @@
 class CcSetup < Formula
   desc "Interactive CLI to manage MCP servers for Claude Code"
   homepage "https://github.com/cc-deck/cc-setup"
-  version "0.3.0"
+  version "0.6.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/cc-deck/cc-setup/releases/download/v0.3.0/cc-setup-0.3.0-darwin-amd64.tar.gz"
-      sha256 "6c8ea3ea3091fc595032c8bf996a5ea80bd4d0e899070440c3c384f41f88cb8c"
+      url "https://github.com/cc-deck/cc-setup/releases/download/v0.6.0/cc-setup-0.6.0-darwin-amd64.tar.gz"
+      sha256 "339b4b6e435ad99d54a1afd71b59cc652cef6c66e95f4a9d2871124c24c0a194"
 
       define_method(:install) do
         bin.install "cc-setup"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/cc-deck/cc-setup/releases/download/v0.3.0/cc-setup-0.3.0-darwin-arm64.tar.gz"
-      sha256 "9fe094a091b2c8eddb110cb371c59afc062f1695848b2dd7fccd56c6fffb3e8c"
+      url "https://github.com/cc-deck/cc-setup/releases/download/v0.6.0/cc-setup-0.6.0-darwin-arm64.tar.gz"
+      sha256 "076e4b43ca496cd3d33a2f3a54f1b336b0e15561b76eb19545a666be3beff198"
 
       define_method(:install) do
         bin.install "cc-setup"
@@ -29,15 +29,15 @@ class CcSetup < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cc-deck/cc-setup/releases/download/v0.3.0/cc-setup-0.3.0-linux-amd64.tar.gz"
-      sha256 "0b54d28ac62f4f66207b60c313de0567f89d43281dc739ba2653989e9cd79084"
+      url "https://github.com/cc-deck/cc-setup/releases/download/v0.6.0/cc-setup-0.6.0-linux-amd64.tar.gz"
+      sha256 "9c157c037399b20726189be363d0547f559579f63e444801b3237eeda26012bf"
       define_method(:install) do
         bin.install "cc-setup"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cc-deck/cc-setup/releases/download/v0.3.0/cc-setup-0.3.0-linux-arm64.tar.gz"
-      sha256 "bdfaa82336a4b15903a8041937bb2a663ef243e0ce54b77bca283faaa628299e"
+      url "https://github.com/cc-deck/cc-setup/releases/download/v0.6.0/cc-setup-0.6.0-linux-arm64.tar.gz"
+      sha256 "0d65a774dfd506270c942106641d43dbb317171d8ededdd3ec6c5f2e55808f1c"
       define_method(:install) do
         bin.install "cc-setup"
       end
