@@ -5,23 +5,23 @@
 class CcDeck < Formula
   desc "The TweetDeck for Claude Code. A Zellij sidebar plugin for managing multiple Claude Code sessions."
   homepage "https://cc-deck.github.io"
-  version "0.16.0"
+  version "0.17.0"
   license "Apache-2.0"
 
   depends_on "zellij" => :recommended
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/cc-deck/cc-deck/releases/download/v0.16.0/cc-deck_0.16.0_darwin_amd64.tar.gz"
-      sha256 "2bd4ab796a0c811f77ca20c354958fdae22dd0f2dac026869061b4a6738df63c"
+      url "https://github.com/cc-deck/cc-deck/releases/download/v0.17.0/cc-deck_0.17.0_darwin_amd64.tar.gz"
+      sha256 "395ba31964c4711fb679c5859e17be06d3d182777004a9f84dee066c68f2093a"
 
       define_method(:install) do
         bin.install "cc-deck"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/cc-deck/cc-deck/releases/download/v0.16.0/cc-deck_0.16.0_darwin_arm64.tar.gz"
-      sha256 "8f7f12445a9ee0ba44473b2433f34c987e0240739fd7bba43eb0adcd0d195b13"
+      url "https://github.com/cc-deck/cc-deck/releases/download/v0.17.0/cc-deck_0.17.0_darwin_arm64.tar.gz"
+      sha256 "57c863de85732fa0cf074fb4124cab619c7eb738082de9bd6e7da67c92d29a66"
 
       define_method(:install) do
         bin.install "cc-deck"
@@ -31,15 +31,15 @@ class CcDeck < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cc-deck/cc-deck/releases/download/v0.16.0/cc-deck_0.16.0_linux_amd64.tar.gz"
-      sha256 "55ceb93e97860e54a08e80eea2332042429d5ce3e5f018d64b86db8dd42e38c6"
+      url "https://github.com/cc-deck/cc-deck/releases/download/v0.17.0/cc-deck_0.17.0_linux_amd64.tar.gz"
+      sha256 "908e326dbae26fb37ba01e4509ebb86b08130c0f59b817097ffca59237260003"
       define_method(:install) do
         bin.install "cc-deck"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cc-deck/cc-deck/releases/download/v0.16.0/cc-deck_0.16.0_linux_arm64.tar.gz"
-      sha256 "8c5d72c3ef9095bbe20870a6a46020e0336f0df32d835c753128c5a388d0c55e"
+      url "https://github.com/cc-deck/cc-deck/releases/download/v0.17.0/cc-deck_0.17.0_linux_arm64.tar.gz"
+      sha256 "58a2cd282ee2bd2ee50b5e5d50b5277a11e89f50333e206cda551cf890f1b426"
       define_method(:install) do
         bin.install "cc-deck"
       end
